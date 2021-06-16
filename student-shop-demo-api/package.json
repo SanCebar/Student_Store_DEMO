@@ -1,0 +1,26 @@
+{
+  "name": "student_store_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanCebar/Student_Store_DEMO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanCebar/Student_Store_DEMO/issues"
+  },
+  "homepage": "https://github.com/SanCebar/Student_Store_DEMO#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.0-alpha.8",
+    "lowdb": "^2.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
