@@ -12,9 +12,9 @@ app.use(cors())
 app.use("/shop", shopRouter)
 
 /* Handle all 404 errors that weren't matched by a route */
-app.use((req, res, next) => {
-  return next(new NotFoundError())
-})
+// app.use((req, res, next) => {
+//   return next(new NotFoundError())
+// })
 
 /* Generic error handler - anything that is unhandled will be handled here */
 app.use((error, req, res, next) => {

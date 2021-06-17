@@ -3,25 +3,29 @@ const Shop = require("../models/shop")
 const { NotFoundError } = require("../utils/errors")
 const router = express.Router()
 
-// desc
+// get all products in db
 router.get("/", async (req, res, next) => {
   try {
-    const box = await Shop.makeBox()
-    res.status(200).json(box)
+    const products = await Shop.fetchProducts()
+    res.status(200).json({ products })
   } catch (err) {
     next(err)
   }
 })
 
-// desc
-// router.post("/transactions", async (req, res, next) => {
-//   try {
-//     const transaction = req.body.transaction
-//     const newTransaction = await Bank.recordTransaction(transaction)
-//     res.status(201).json({ transaction: newTransaction })
-//   } catch (err) {
-//     next(err)
-//   }
-// })
-
+//get a single product
+router.get("/products/:productId", async (req, res, next) => {
+    try {
+      const productId = req.params.productId
+      const product = await Shop.fetchProductById(productId)
+      if (!product) {
+        throw new NotFoundError("Product not found")
+      }
+      res.status(200).json({ product })
+    } catch (err) {
+      next(err)
+    }
+  })
+  
+  
 module.exports = router

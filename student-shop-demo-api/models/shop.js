@@ -1,12 +1,21 @@
 const { BadRequestError } = require("../utils/errors");
-// const { storage } = require("../data/storage")
+const { storage } = require("../data/storage")
 
 class Shop {
-  static async makeBox() {
+  static async fetchProducts() {
     // desc
-    // const transactions = storage.get("transactions").value();
-    const newBox = ["hello world!", 10]
-    return newBox;
+    const products = storage.get("products").value();
+    // const products = [{[namie]: "happy"}]
+    return products;
+  }
+
+  static async fetchProductById(productId) {
+    // fetch a single transaction
+    const product = storage
+      .get("products")
+      .find({ id: Number(productId) })
+      .value();
+    return product;
   }
 }
 
