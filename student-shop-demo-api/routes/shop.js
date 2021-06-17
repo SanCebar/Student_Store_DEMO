@@ -1,4 +1,5 @@
 const express = require("express")
+const { createNewOrder } = require("../models/shop")
 const Shop = require("../models/shop")
 const { NotFoundError } = require("../utils/errors")
 const router = express.Router()
@@ -27,5 +28,15 @@ router.get("/products/:productId", async (req, res, next) => {
     }
   })
   
+//create a new order
+router.post("/", async (req, res, next) => {
+  try {
+    const order = req.body
+    const receipt = await Shop.createNewOrder(order)
+    res.status(200).json({ receipt })
+  } catch(err) {
+    next(err)
+  }
+})
   
 module.exports = router

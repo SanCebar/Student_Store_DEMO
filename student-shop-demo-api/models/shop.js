@@ -3,10 +3,9 @@ const { storage } = require("../data/storage")
 
 class Shop {
   static async fetchProducts() {
-    // desc
-    const products = storage.get("products").value();
-    // const products = [{[namie]: "happy"}]
-    return products;
+    // fetch entire list of products
+    const products = storage.get("products").value()
+    return products
   }
 
   static async fetchProductById(productId) {
@@ -14,8 +13,35 @@ class Shop {
     const product = storage
       .get("products")
       .find({ id: Number(productId) })
-      .value();
-    return product;
+      .value()
+    return product
+  }
+
+  static async createNewOrder(order) {
+    //create new order
+    /* Error Handling */
+    if (!order) {
+      throw new BadRequestError(`No order sent.`)
+    }
+    let requiredFields = ["cart", "userInfo"]
+    requiredFields.forEach((field) => {
+      if (!order[field] && order[field] !== 0) {
+        throw new BadRequestError(`Field: "${field}" is required in order`)
+      }
+    })
+    /* Error handling for userInfo */
+    requiredFields = ["name", "email"]
+    requiredFields.forEach((field) => {
+      if (!order["userInfo"][field] && order["userInfo"][field] !== 0) {
+        throw new BadRequestError(`userInfo Field: "${field}" is required in order`)
+      }
+    })
+
+    const postedAt = new Date().toISOString()
+
+    const receipt = { postedAt, ...order["userInfo"] }
+
+    return receipt
   }
 }
 
