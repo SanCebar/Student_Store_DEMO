@@ -1,5 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 2 Assignment: Student Store
 
 Submitted by: **Robert Velasco**
@@ -10,7 +8,7 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 #### REQUIRED FEATURES
 
-- [ ] The API should contain an endpoint that serves an array of all products in the store
+- [x] The API should contain an endpoint that serves an array of all products in the store
 - [ ] An endpoint should exist for creating orders and saving them to a JSON file. Each order should contain the email of the person placing the order, the items associated with the order, and the quantity of each item purchased.
 - [ ] A Store model should handle all data management logic for the API and be the interface for read/write operations to the JSON file.
 - [ ] The frontend should include a landing page that displays the products available for purchase.
