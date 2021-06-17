@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import axios from "axios"
 import Navbar from '../Navbar/Navbar';
+import About from '../About/About';
 import Home from '../Home/Home';
+import Product from '../Product/Product';
 import './App.css';
 
 function App() {
@@ -25,8 +28,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Home products={products}/>
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home products={products} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop/products/:productId" element={<Product />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

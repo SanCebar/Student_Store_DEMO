@@ -33,3 +33,7 @@
     font-size: 18px;
     color: yellow;
 }
+.navbar a {
+    color: yellow;
+    text-decoration: none;
+}
