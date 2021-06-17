@@ -1,0 +1,35 @@
+.navbar {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+.navbar .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    /* center yourself */
+    margin: 0 auto;
+}
+.navbar .content .logo {
+    color: yellow;
+    font-size: 25px;
+}
+.navbar .content .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.navbar .content .links li {
+    margin: 0 20px;
+    font-size: 18px;
+    color: yellow;
+}
