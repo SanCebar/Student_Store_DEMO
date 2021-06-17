@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "name": "Juice",
+      "name": "Flamin Hot Cheetos",
       "category": "food",
       "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
       "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
@@ -20,12 +20,21 @@
     },
     {
       "id": 3,
-      "name": "Flamin Hot Cheetos",
-      "category": "food",
-      "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
-      "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
-      "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
-      "price": 1.5
+      "name": "Mario Figurine",
+      "category": "video games",
+      "image": "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80",
+      "source": "https://unsplash.com/photos/HUyICL8qbEE",
+      "description": "A great piece for your collection!",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Gameboy Color",
+      "category": "video games",
+      "image": "https://images.unsplash.com/photo-1525799894461-3cfe39b72d69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+      "source": "https://unsplash.com/photos/1qx2J3TsRsk",
+      "description": "A lightly used iconic games system full of memories",
+      "price": 65
     }
   ],
   "orders": [
