@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import moment from "moment"
 import "./ProductPreview.css"
 
 const defaultCoverImg = "https://images.unsplash.com/photo-1516009086893-4b3561b27fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"

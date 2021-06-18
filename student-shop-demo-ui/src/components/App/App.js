@@ -30,12 +30,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-
+        
         <Routes>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/about" element={<About />} />
           <Route path="/shop/products/:productId" element={<Product />} />
         </Routes>
+
       </BrowserRouter>
     </div>
   );

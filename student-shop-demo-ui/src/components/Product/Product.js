@@ -1,36 +1,73 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-import Hero from "../Hero/Hero"
-import "./Product.css"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import Hero from "../Hero/Hero";
+import "./Product.css";
 
-const defaultProductImg = 
-    "https://images.unsplash.com/photo-1516009086893-4b3561b27fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
+const defaultProductImg =
+  "https://images.unsplash.com/photo-1516009086893-4b3561b27fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80";
 
 export default function Product() {
-    const [product, setProduct] = useState({})
+  const { productId } = useParams();
+  const [product, setProduct] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProductById = async () => {
+      setIsLoading(true);
+
+      try {
+        const res = await axios.get(
+          `http://localhost:3001/shop/products/${productId}`
+        );
+        if (res?.data?.product) {
+          setProduct(res.data.product);
+        } else {
+          setError("Product not found.");
+        }
+      } catch (err) {
+        setError("Product not found.");
+      }
+
+      setIsLoading(false);
+    };
+
+    fetchProductById();
+  }, [productId]);
+
+  const renderProductContent = () => {
+    if (isLoading) {
+      return <h1>Loading...</h1>;
+    }
+    if (error) {
+      return (
+        <>
+          <h1>Error</h1>
+          <p className="error">{String(error)}</p>
+        </>
+      );
+    }
 
     return (
-        <div className="product">
-            <div className="product-container">
-                <div className="product-cover" 
-                    style={{
-                        backgroundImage: `url(${product.image || defaultProductImg})`
-                    }}
-                >
-                </div>
+      <>
+        <h1>{product.name}</h1>
 
-                <div className="product-content">
-                    <h1>{product.name}</h1>
+        <div className="product-body">{product.description}</div>
 
-                    <div className="product-body">
-                        {product.description}
-                    </div>
-
-                    <div className="product-footer">
-                        <span className="price">{product.price}</span>
-                    </div>
-                </div>
-            </div>
+        <div className="product-footer">
+          <span className="price"><p>$ {product.price}</p></span>
         </div>
-    )
+      </>
+    );
+  };
+
+  return (
+    <div className="product-container">
+      <div className="product-cover" > 
+        <img alt="" src={product.image || defaultProductImg} />
+      </div>
+      <div className="product-content">{renderProductContent()}</div>
+    </div>
+  );
 }
