@@ -13,6 +13,7 @@
 .product-preview-container:hover {
     opacity: 0.5;
     transform: translateY(1px);
+    overflow: visible;
 }
 .product-preview-cover {
     background-size: cover;
@@ -26,6 +27,7 @@
     width: 80%;
 }
 .product-preview-title h1 {
+    margin: 20px 0;
     color: #333;
     font-weight: 100;
 }
@@ -36,7 +38,16 @@
     border-top: 1px solid #e6e6e6;
     padding: 10px 20px;
 }
-.product-preview-footer span {
+.product-preview-footer .product-preview-pricing p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.product-preview-footer .product-preview-buttons {
+    margin-left: 20px;
+    padding: 5px;
+}
+.product-preview-footer .product-details {
     color: #999;
     font-size: 14px;
     letter-spacing: 1px;
@@ -45,8 +56,10 @@
     border: 1px solid #999;
     border-radius: 4px;
     padding: 0 8px;
+    margin-left: 0;
+  
 }
-.product-preview-footer p {
+.product-preview-footer span p {
     margin: 0;
     padding: 0;
     display: inline;

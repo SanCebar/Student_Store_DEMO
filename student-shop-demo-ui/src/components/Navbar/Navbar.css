@@ -4,7 +4,7 @@
     width: 98%;
     align-items: center;
     display: flex;
-    position: sticky;
+    /* position: sticky; */
     /* position: -webkit-sticky; */
     margin: 10px 10px;
     background: #ffc700;
@@ -25,7 +25,7 @@
 }
 .navbar .content .logo {
     color: black;
-    font-size: 25px;
+    font-size: 40px;
 }
 .navbar .content .links {
     display: flex;
@@ -36,7 +36,7 @@
 }
 .navbar .content .links li {
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 22px;
     color: black;
 }
 .navbar a {

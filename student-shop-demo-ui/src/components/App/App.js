@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import axios from "axios"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
 import Navbar from '../Navbar/Navbar';
+import Sidebar from '../Sidebar/Sidebar';
 import About from '../About/About';
 import Home from '../Home/Home';
 import Product from '../Product/Product';
@@ -29,14 +30,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<Home products={products} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/shop/products/:productId" element={<Product />} />
-        </Routes>
-
+        <div className="sidebar-panel">
+          <Route path="/" element={<Sidebar />} />
+        </div>
+        <div className="webpage-panel">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home products={products} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop/products/:productId" element={<Product />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

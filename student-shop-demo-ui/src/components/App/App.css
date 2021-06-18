@@ -1,7 +1,14 @@
-
-.App {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.App{
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+.App .webpage-panel {
     background: #f6f6fe;
-    min-height: 100vh;
 }
 .App a {
     text-decoration: none;

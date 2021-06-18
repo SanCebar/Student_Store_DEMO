@@ -21,6 +21,7 @@
 }
 .product-content {
     align-self: start;
+    max-width: 55%;
 }
 .product-footer {
     margin-top: 10px;
