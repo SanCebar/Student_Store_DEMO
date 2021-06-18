@@ -2,7 +2,7 @@
 
 ## Week 2 Assignment: Student Store
 
-Submitted by: **NAME**
+Submitted by: **Robert Velasco**
 
 Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
