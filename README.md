@@ -26,7 +26,7 @@ Deployed Application: [Student Store Deployed Site](https://glib-reading.surge.s
 
 ### Walkthrough Video
 
-`https://www.loom.com/share/9e12fabb91e6439e8beda07fb871c802`
+https://www.loom.com/share/9e12fabb91e6439e8beda07fb871c802
 
 ### Reflection
 
