@@ -2,7 +2,7 @@
 
 Submitted by: **Robert Velasco**
 
-Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Student Store Deployed Site](https://glib-reading.surge.sh/#)
 
 ### Application Features
 
