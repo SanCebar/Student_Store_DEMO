@@ -44,6 +44,33 @@
       "source": "https://unsplash.com/photos/TDmf_aiuta0",
       "description": "Exactly two brushes. Artisan?",
       "price": 98
+    },
+    {
+      "id": 6,
+      "name": "Canon Camera",
+      "category": "photography",
+      "image": "https://images.unsplash.com/photo-1495707902641-75cac588d2e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+      "source": "https://unsplash.com/photos/gGgoDJRD2WM",
+      "description": "A brand new camera to capture all your favorite memories. Take high quality photos with a click!",
+      "price": 132
+    },
+    {
+      "id": 7,
+      "name": "Headphones",
+      "category": "accessories",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=331&q=80",
+      "source": "https://unsplash.com/photos/LSNJ-pltdu8",
+      "description": "Meet the next generation Shopp headphones. Tested and improved by our R&D team, these new XM500Y86 headphones are the newest addition to our family of sound gear.",
+      "price": 98
+    },
+    {
+      "id": 8,
+      "name": "Chicken Nugget",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1550513008-8cd1a9b590c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+      "source": "https://unsplash.com/photos/ZimIwyvYeBM",
+      "description": "It's like a little nugget of gold. Bidding starts at $20,000.",
+      "price": 20000
     }
   ],
   "orders": [
