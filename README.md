@@ -26,9 +26,7 @@ Deployed Application: [Student Store Deployed Site](https://glib-reading.surge.s
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`https://www.loom.com/share/9e12fabb91e6439e8beda07fb871c802`
 
 ### Reflection
 
