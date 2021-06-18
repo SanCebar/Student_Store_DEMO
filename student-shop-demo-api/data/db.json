@@ -2,21 +2,21 @@
   "products": [
     {
       "id": 1,
-      "name": "Rice Krispies",
-      "category": "food",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
-      "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
-      "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
-      "price": 0.99
+      "name": "Watercolors",
+      "category": "paint",
+      "image": "https://images.unsplash.com/photo-1601220959415-375d328bddc4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      "source": "https://unsplash.com/photos/BZUo9Tf83HQ",
+      "description": "Oil paints are overrated. Create more fluid art with watercolors!",
+      "price": 8.99
     },
     {
       "id": 2,
-      "name": "Flamin Hot Cheetos",
-      "category": "food",
-      "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
-      "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
-      "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
-      "price": 1.5
+      "name": "Jacket",
+      "category": "clothing",
+      "image": "https://images.unsplash.com/photo-1489972536996-943907ea1cd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+      "source": "https://unsplash.com/photos/SQs7ciuUskI",
+      "description": "Stay warm and look fashionable!",
+      "price": 37.5
     },
     {
       "id": 3,
@@ -35,6 +35,15 @@
       "source": "https://unsplash.com/photos/1qx2J3TsRsk",
       "description": "A lightly used iconic games system full of memories",
       "price": 65
+    },
+    {
+      "id": 5,
+      "name": "Paintbrushes",
+      "category": "paint",
+      "image": "https://images.unsplash.com/photo-1505840541251-02ab21f95b45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80",
+      "source": "https://unsplash.com/photos/TDmf_aiuta0",
+      "description": "Exactly two brushes. Artisan?",
+      "price": 98
     }
   ],
   "orders": [
