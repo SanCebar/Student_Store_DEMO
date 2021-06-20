@@ -14,7 +14,7 @@ router.get("/", async (req, res, next) => {
   }
 })
 
-//get a single product
+//get a single product by the Id
 router.get("/products/:productId", async (req, res, next) => {
     try {
       const productId = req.params.productId

@@ -1,0 +1,115 @@
+.CartActivity {
+    display: flex;
+    flex-direction: column;
+}
+.CartActivity h2 {
+    color: #fff;
+    margin-bottom: 24px;
+    font-size: 28px;
+    margin-top: 40px;
+}
+.CartActivity .table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid rgba(246, 246, 254, 0.3); */
+    /* border-radius: 100px; */
+}
+.CartActivity .table .table-row {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(196, 196, 196, 0.3);
+    background: white;
+    transition: all 0.2s ease;
+    /* cursor: pointer; */
+}
+.CartActivity .table .table-row.table-header .col {
+    background: rgba(44, 64, 71, 1);
+    color: white;
+}
+.CartActivity .table .table-row .col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    padding: 25px;
+    color: rgba(44, 65, 71, 1);
+    font-weight: 600;
+}
+.CartActivity .table .table-row .col.x1 {
+    flex: 1;
+}
+.CartActivity .table .table-row .col.x15 {
+    flex: 1.5;
+}
+.CartActivity .table .table-row .col.x2 {
+    flex: 2;
+}
+.CartActivity .table .table-row .col.x3 {
+    flex: 3;
+}
+.CartActivity .table .table-row .col.x4 {
+    flex: 4;
+}
+.CartActivity .table button {
+    background-color: transparent;
+    color: rgba(44, 65, 71, 1);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #999;
+    border-radius: 4px;
+
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+}
+.CartActivity .table button:hover {
+    opacity: 0.8;
+    transform: translateY(1px);
+}
+.CartActivity .table .table-row .modify-buttons {
+    padding: 25px 15px;
+}
+hr {
+    margin: 1rem 0;
+}
+.CartActivity .table .table-row-pricing {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+    /* border-bottom: 1px solid rgba(196, 196, 196, 0.3); */
+    background: transparent;
+    transition: all 0.2s ease;
+}
+.CartActivity .table .table-row-pricing .col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding: 8px 25px;
+    color: #fff;
+    font-weight: 500;
+}
+.text-right {
+    text-align: right;
+}
+.CartActivity .table .table-row-pricing .col.x1 {
+    flex: 1;
+}
+.CartActivity .table .table-row-pricing .col.x15 {
+    flex: 1.5;
+}
+.CartActivity .table .table-row-pricing .col.x2 {
+    flex: 2;
+}
+.CartActivity .table .table-row-pricing .col.x3 {
+    flex: 3;
+}
+.CartActivity .table .table-row-pricing .col.x4 {
+    flex: 4;
+}

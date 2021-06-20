@@ -43,9 +43,13 @@
     padding: 0;
     display: inline;
 }
-.product-preview-footer .product-preview-buttons {
-    margin-left: 20px;
+.product-preview-footer .product-preview-pricing button {
+    margin-left: 5rem;
     padding: 5px;
+    cursor: pointer;
+}
+.product-preview-footer .product-preview-pricing button:hover {
+    transform: translateY(1px);
 }
 .product-preview-footer .product-details {
     color: #999;

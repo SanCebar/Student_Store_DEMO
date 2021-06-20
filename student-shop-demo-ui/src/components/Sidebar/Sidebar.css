@@ -12,6 +12,13 @@
     margin-left: 1rem;
     font-size: 2rem;
     background: none;
+    cursor: pointer;
+}
+.badge {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #ffc700;
 }
 .nav-menu {
     background-color: #060b26;
@@ -23,10 +30,25 @@
     top: 0;
     left: -100%;
     transition: 850ms;
+
+    overflow-y: scroll;
 }
+.nav-menu::-webkit-scrollbar {
+    width: 0.25rem;
+}
+.nav-menu::-webkit-scrollbar-track {
+    background: #060b26;
+}
+.nav-menu::-webkit-scrollbar-thumb {
+    background: #ffc700;
+}
+
 .nav-menu.active {
     left: 0;
     transition: 250ms;
+}
+.nav-menu li {
+    list-style: none;
 }
 .nav-text {
     display: flex;
@@ -56,7 +78,4 @@
     font-size: 2rem;
     margin-left: 0;
     margin-right: 16px;
-}
-span {
-    margin-left: 16px;
 }

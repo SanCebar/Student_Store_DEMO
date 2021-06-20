@@ -10,6 +10,8 @@ import './App.css';
 
 function App() {
   const [products, setProducts] = useState([])
+  const [productRows, setProductRows] = useState([])
+  const [cart, setCart] = useState({})
 
   useEffect( () => {
     const fetchProducts = async () => {
@@ -27,18 +29,44 @@ function App() {
     fetchProducts()
   }, [])
 
+  const onAdd = (product) => {
+    const exist = productRows.find(x => x.id === product.id)
+    if (exist) {
+      setProductRows(
+        productRows.map(x => 
+          x.id === product.id ? {...exist, qty: exist.qty + 1 } : x
+        )
+      )
+    } else {
+      setProductRows([...productRows, {...product, qty: 1 }])
+    }
+  }
+
+  const onRemove = (product) => {
+    const exist = productRows.find(x => x.id === product.id)
+    if (exist.qty === 1) {
+      setProductRows(productRows.filter( x => x.id !== product.id ))
+    } else {
+      setProductRows(
+        productRows.map(x => 
+          x.id === product.id ? {...exist, qty: exist.qty - 1 } : x
+        )
+      )
+    }
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
         <div className="sidebar-panel">
-          <Route path="/" element={<Sidebar />} />
+          <Sidebar countCartItems={productRows.length} onAdd={onAdd} onRemove={onRemove} productRows={productRows}/>
         </div>
         <div className="webpage-panel">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home products={products} />} />
+            <Route path="/" element={<Home products={products} cart={cart} setCart={setCart} onAdd={onAdd}/>} />
             <Route path="/about" element={<About />} />
-            <Route path="/shop/products/:productId" element={<Product />} />
+            <Route path="/shop/products/:productId" element={<Product onAdd={onAdd} />} />
           </Routes>
         </div>
       </BrowserRouter>
